@@ -21,6 +21,10 @@ public class CalculatorServiceImpl implements CalculatedService {
 
     @Override
     public int divide(int x, int y) {
-        return x / y;
+        try {
+            return x / y;
+        } catch (ArithmeticException e) {
+            return -1;
+        }
     }
 }
